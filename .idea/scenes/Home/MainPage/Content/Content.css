@@ -1,0 +1,23 @@
+.content{
+    padding-top: 80px;
+    padding-left: 250px;
+    color: aliceblue;
+}
+
+
+
+.content ul{
+    size: 100px;
+    padding-inline-start: 30px;
+    list-style: none;
+
+}
+
+.content ul li{
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.content ul li img{
+    size: 100px;
+}
