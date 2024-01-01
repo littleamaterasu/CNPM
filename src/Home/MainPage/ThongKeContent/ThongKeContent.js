@@ -3,10 +3,10 @@ import { getUserById } from "../../../service/getUserById"
 import './ThongKeContent.css'
 function ThongKeContent() {
     const [userData, setUserData] = useState(null)
-
+    const url = 'https://jsonplaceholder.typicode.com/users'
     useEffect(() => {
         const getUser = async () => {
-            const user = await getUserById(1)
+            const user = await getUserById(url, 1)
             console.log(user.name)
             setUserData(user)
         }

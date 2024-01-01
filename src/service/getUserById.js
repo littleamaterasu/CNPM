@@ -1,10 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://jsonplaceholder.typicode.com/users';
-
-export const getUserById = async (userId) => {
+export const getUserById = async (url, userId) => {
   try {
-    const response = await axios.get(`${BASE_URL}/${userId}`);
+    const response = await axios.get(`${url}/${userId}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching user data:', error);
