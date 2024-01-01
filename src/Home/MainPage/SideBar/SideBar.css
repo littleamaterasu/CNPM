@@ -1,0 +1,19 @@
+.sidebar {
+    color: aliceblue;
+    padding-right: 100px;
+    border-bottom: solid;
+    border-color: #ffffff50;
+    position: fixed;
+    /* Set the position to fixed */
+    left: 20px;
+    top: 60px;
+}
+
+.sidebar ul {
+    padding-inline-start: 0;
+}
+
+.sidebar li {
+    list-style: none;
+    margin-bottom: 10px;
+}

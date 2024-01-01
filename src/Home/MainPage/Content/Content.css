@@ -1,0 +1,24 @@
+.content{
+    padding-top: 60px;
+    padding-left: 350px;
+    color: aliceblue;
+}
+
+.content button{
+
+}
+
+.DisplayGame{
+    padding-left: 50px;
+    padding-right: 100px;
+    display: flex;
+}
+
+.Info img{
+    width: 25%;
+    height: auto;
+}
+
+
+
+
