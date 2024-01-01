@@ -1,0 +1,8 @@
+.GameList{
+    padding-top: 60px;
+    padding-left: 350px;
+    color: aliceblue;
+}
+.GameList ul li{
+    cursor: pointer;
+}

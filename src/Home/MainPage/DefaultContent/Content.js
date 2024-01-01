@@ -6,10 +6,6 @@ function Content({ gameInfos = [] }) {
 
     const len = gameInfos.length
 
-    // const choosePage = () => {
-    //     setCurIndex()
-    // }
-
     const nextGame = () => {
         setCurIndex((preIndex) => (preIndex + 1) % len)
     }
@@ -24,15 +20,10 @@ function Content({ gameInfos = [] }) {
             <h1>Top Newest Games</h1>
             <div className='DisplayGame'>
                 <div className='Info'>
-                    <h4>{curIndex + 1}. {gameInfos[curIndex].game}</h4>
-                    <img src={gameInfos[curIndex].img1} alt='IMG'></img>
-                    <img src={gameInfos[curIndex].img2} alt='IMG'></img>
-                    <br></br>
-                    <img src={gameInfos[curIndex].img3} alt='IMG'></img>
-                    <img src={gameInfos[curIndex].img4} alt='IMG'></img>
+                    <h4>{curIndex + 1}. {gameInfos[curIndex].name}</h4>
                 </div>
                 <div className='Shot'>
-                    <img src={gameInfos[curIndex].img} alt='IMG'></img>
+                    <img src={gameInfos[curIndex].imageUrl} alt='IMG'></img>
                 </div>
             </div>
             <button onClick={prevGame}><i className='fa-solid fa-arrow-left'></i></button>

@@ -7,7 +7,6 @@ html {
   width: 100%;
   padding-right: 24px;
   padding-left: 16px;
-  display: block;
   background-color: black;
   border-bottom: solid;
   border-color: #ffffff50;
@@ -19,19 +18,10 @@ html {
   top: 0; /* Fix the sidebar to the top */
 }
 
-#header div {
-  display: inline-block;
-}
-
-#header div a {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-}
-
-#header .nav a {
+.nav {
+  color: aliceblue;
   padding: 7.5px 7.5px;
-  display: inline-block;
+  display: flex;
   margin: 0 5px;
   border-radius: 10px;
 }
@@ -46,70 +36,7 @@ html {
   padding: 0 5px;
 }
 
-#header .navItem {
-  font-size: 20px;
+.useraction{
+  padding-right: 30px;
 }
 
-/*Hop tim kiem*/
-#header .search {
-  background-color: white;
-  height: 40px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#header .search .search-btn {
-  color: black;
-  border: solid;
-  border-color: lightgray;
-  border-width: 1px;
-}
-
-#header .search input {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-color: rgba(255, 255, 255, 0.5);
-  height: 40px;
-  width: 300px;
-  padding-left: 5px;
-}
-
-#header .search .search-btn {
-  display: inline-block;
-  line-height: 40px;
-  padding: 0 10px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border: solid;
-  border-width: 1px;
-  border-color: rgba(255, 255, 255, 0.5);
-  border-left-color: lightgray;
-}
-
-#header .search .search-btn:hover {
-  background-color: lightgray;
-  color: black;
-}
-
-/*Gio hang + pro5*/
-#header.useraction {
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
-
-#header .useraction a {
-  display: inline-block;
-  border-radius: 10px;
-  min-width: 30px;
-  font-size: 20px;
-  padding: 10px;
-  margin: 0 5px;
-}
-
-#header .useraction a:hover {
-  background-color: lightgray;
-  color: black;
-}

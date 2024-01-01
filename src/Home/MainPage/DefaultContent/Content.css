@@ -4,17 +4,15 @@
     color: aliceblue;
 }
 
-.content button{
-
-}
-
 .DisplayGame{
+    aspect-ratio: 2/1;
     padding-left: 50px;
     padding-right: 100px;
-    display: flex;
+    display: grid;
+    justify-items: end;
 }
 
-.Info img{
+.Info{
     width: 25%;
     height: auto;
 }

@@ -1,15 +1,32 @@
+// UserAvt.js
 import React, { useState } from "react";
+import { FaUser } from "react-icons/fa";
+import "./UserAvt.css";
 
-function UserAvt() {
+function UserAvt({handleSetActive}) {
+    const [popup, setPopup] = useState(false)
+
+    const handleSetPopup = () => {
+        setPopup((prev) => !prev)
+    };
+
     return (
-        <div>
-            <ul>
-                <li>Thống kê</li>
-                <li>Chỉnh sửa thông tin</li>
-                <li>Đăng xuất</li>
-            </ul>
+        <div className="user-avatar-container">
+            <div className="avt">
+                <FaUser onClick={handleSetPopup} style={{ color: "white" }} />
+            </div>
+
+            {popup && (
+                <div className="popup">
+                    <ul>
+                        <li onClick={() => handleSetActive("Thongke")}>Thống kê</li>
+                        <li onClick={() => handleSetActive("ChangeInfo")}>Chỉnh sửa thông tin</li>
+                        <li>Đăng xuất</li>
+                    </ul>
+                </div>
+            )}
         </div>
-    )
+    );
 }
 
-export default UserAvt
+export default UserAvt;

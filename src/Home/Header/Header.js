@@ -1,34 +1,27 @@
 import './Header.css'
-const Header = () => {
-    return (
-      <div id="header">
-        <div className="nav">
-          <a href="" className="logo">
-            <i className="fa-brands fa-tiktok"></i>
-          </a>
-          <a href="" className="navItem">Text</a>
-          <a href="" className="navItem">Text</a>
-          <a href="" className="navItem">Text</a>
-        </div>
-
-        <div className="search">
-          <input type="text" placeholder="Nhập tên trò chơi" />
-          <a href="" className="search-btn">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </a>
-        </div>
-
-        <div className="useraction">
-          <a href="" className="cart-btn">
-            <i className="fa-solid fa-cart-shopping"></i>
-          </a>
-
-          <a href="" className="pro5btn">
-            <i className="fa-solid fa-user"></i>
-          </a>
-        </div>
+import UserAvt from './UserAvt/UserAvt'
+import ShoppingCart from './ShoppingCart/ShoppingCart'
+import SearchBar from './SearchBar/searchBar'
+const Header = ({handleSetActive, handleSetGameSelectedList}) => {
+  return (
+    <div id="header">
+      <div className="nav">
+        <i onClick={() => handleSetActive("default")} className="fa-brands fa-tiktok"></i>
+        <h4>Text</h4>
+        <h4>Text</h4>
+        <h4>Text</h4>
       </div>
-    )
+
+      <div className="search">
+        <SearchBar handleSetActive={handleSetActive} handleSetGameSelectedList={handleSetGameSelectedList}/>
+      </div>
+
+      <div className="useraction">
+        <ShoppingCart/>
+        <UserAvt handleSetActive={handleSetActive}/>
+      </div>
+    </div>
+  )
 }
 
 export default Header

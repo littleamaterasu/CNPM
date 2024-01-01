@@ -1,17 +1,9 @@
 import './App.css';
-import Header from './Home/Header/Header';
-import MainPage from './Home/MainPage/MainPage';
-import Description from './Home/MainPage/SideBar/Description/Description';
-
+import Home from './Home/Home';
 
 function App() {
-    return (
-      <div className='Home'>
-        <Header />
-        <MainPage />
-        <Description />
-      </div>
-    )
-  }
-
+  return (
+    <Home/>
+  )
+}
 export default App;
