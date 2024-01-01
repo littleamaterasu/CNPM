@@ -1,0 +1,22 @@
+.content{
+    padding-top: 60px;
+    padding-left: 350px;
+    color: aliceblue;
+}
+
+.DisplayGame{
+    aspect-ratio: 2/1;
+    padding-left: 50px;
+    padding-right: 100px;
+    display: grid;
+    justify-items: end;
+}
+
+.Info{
+    width: 25%;
+    height: auto;
+}
+
+
+
+

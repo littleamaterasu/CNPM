@@ -1,0 +1,28 @@
+.res {
+    margin-top: 200px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.res ul{
+    list-style: none;
+}
+
+.res ul li{
+    cursor: pointer;
+}
+
+.res ul li:hover{
+    background-color: #ccc;
+}
+
+.SearchBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Input{
+    margin-top: 200px;
+}
+
