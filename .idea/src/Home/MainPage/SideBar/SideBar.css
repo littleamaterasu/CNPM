@@ -1,16 +1,12 @@
 .sidebar {
     color: aliceblue;
-    padding-left: 20px;
     padding-right: 100px;
-    padding-bottom: 210px;
-    border-right: solid;
+    border-bottom: solid;
     border-color: #ffffff50;
     position: fixed;
     /* Set the position to fixed */
-    left: 0;
-    /* Fix the sidebar to the left */
-    top: 80px;
-    /* Fix the sidebar to the top */
+    left: 20px;
+    top: 60px;
 }
 
 .sidebar ul {

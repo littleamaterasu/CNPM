@@ -1,0 +1,42 @@
+html {
+  font-family: sans-serif;
+}
+
+#header {
+  height: 60px;
+  width: 100%;
+  padding-right: 24px;
+  padding-left: 16px;
+  background-color: black;
+  border-bottom: solid;
+  border-color: #ffffff50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed; /* Set the position to fixed */
+  left: 0; /* Fix the sidebar to the left */
+  top: 0; /* Fix the sidebar to the top */
+}
+
+.nav {
+  color: aliceblue;
+  padding: 7.5px 7.5px;
+  display: flex;
+  margin: 0 5px;
+  border-radius: 10px;
+}
+
+#header .nav .navItem:hover {
+  color: black;
+  background-color: lightgray;
+}
+
+#header .logo {
+  font-size: 30px;
+  padding: 0 5px;
+}
+
+.useraction{
+  padding-right: 30px;
+}
+
