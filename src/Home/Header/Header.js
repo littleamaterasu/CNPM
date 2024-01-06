@@ -17,7 +17,7 @@ const Header = ({handleSetActive, handleSetGameSelectedList}) => {
       </div>
 
       <div className="useraction">
-        <ShoppingCart/>
+        <ShoppingCart handleSetActive={() => handleSetActive("Cart")}/>
         <UserAvt handleSetActive={handleSetActive}/>
       </div>
     </div>

@@ -11,8 +11,9 @@ function GameList({ gameSelectedList, handleSetActive }) {
         <div className="GameList">
             {<ul>
                 {gameSelectedList.map((Data, Key) => (
-                    <li onClick={() => handleSetActive("GameInfo", Data)} key={Key}>
-                        {Data.name} (ID: {Data.id})
+                    <li key={Key}>
+                        <h3 onClick={() => handleSetActive("GameInfo", Data)}>{Data.name} (ID: {Data.id})</h3>
+                        {/* <input type='checkbox' onChange={}/> */}
                     </li>
                 ))}
             </ul>}

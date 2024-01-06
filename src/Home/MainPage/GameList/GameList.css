@@ -4,5 +4,8 @@
     color: aliceblue;
 }
 .GameList ul li{
+    display: flex;
+}
+.GameList ul li h3{
     cursor: pointer;
 }

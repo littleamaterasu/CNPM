@@ -20,7 +20,7 @@ function Download({ game }) {
     }, [game]);
 
     return <button>
-        <a href={gameData.url} download="img.txt">Download</a>
+        <a>Download</a>
     </button>;
 }
 
