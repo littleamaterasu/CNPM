@@ -13,7 +13,7 @@ function UserAvt({handleSetActive}) {
     return (
         <div className="user-avatar-container">
             <div className="avt">
-                <FaUser onClick={handleSetPopup} style={{ color: "white" }} />
+                <FaUser onClick={handleSetPopup} />
             </div>
 
             {popup && (

@@ -1,22 +1,47 @@
-.content{
-    padding-top: 60px;
-    padding-left: 350px;
+.content {
     color: aliceblue;
-}
-
-.DisplayGame{
-    aspect-ratio: 2/1;
-    padding-left: 50px;
-    padding-right: 100px;
-    display: grid;
-    justify-items: end;
-}
-
-.Info{
-    width: 25%;
-    height: auto;
-}
-
-
-
-
+    margin-left: 200px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .DisplayGame {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .GameInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Info {
+    margin-bottom: 15px;
+  }
+  
+  .Info h4 {
+    font-size: 18px;
+  }
+  
+  .Shot img {
+    max-width: 100%;
+    max-height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  

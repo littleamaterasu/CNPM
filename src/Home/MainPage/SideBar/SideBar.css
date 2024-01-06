@@ -1,19 +1,31 @@
+/* SideBar.css */
+
 .sidebar {
-    color: aliceblue;
-    padding-right: 100px;
-    border-bottom: solid;
-    border-color: #ffffff50;
-    position: fixed;
-    /* Set the position to fixed */
-    left: 20px;
-    top: 60px;
+  top: 60px;
+  width: 200px;
+  color: aliceblue;
+  border-right: 1px solid aliceblue;
+  padding-left: 20px;
+  height: 1000px;
 }
 
-.sidebar ul {
-    padding-inline-start: 0;
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.sidebar li {
-    list-style: none;
-    margin-bottom: 10px;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+ul li:hover {
+  text-decoration: underline;
 }

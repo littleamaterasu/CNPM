@@ -6,6 +6,7 @@ import ThongKeContent from './MainPage/ThongKeContent/ThongKeContent'
 import GameInfo from './MainPage/GameContent/GameContent'
 import GameList from './MainPage/GameList/GameList'
 import ChangeInfo from './MainPage/ChangeInfo/ChangeInfo'
+import './Home.css'
 
 const categories = [
     'Adventure',
@@ -99,7 +100,7 @@ function Home() {
     return (
         <div>
             <Header handleSetActive={handleSetActive} handleSetGameSelectedList={handleSetGameSelectedList} />
-            <SideBar categories={categories} />
+            <div className='mainpage'><SideBar categories={categories} />
             {
                 (active === "default" && <Content gameInfos={games} />)
                 || (active === "Thongke" && <ThongKeContent />)
@@ -107,7 +108,8 @@ function Home() {
                 || (active === "gameSelectedList" && <GameList gameSelectedList={gameSelectedList} handleSetActive={handleSetActive} />)
                 || (active === "ChangeInfo" && <ChangeInfo />)
                 || <h3>Error</h3>
-            }
+            }</div>
+            
         </div>
     )
 }
