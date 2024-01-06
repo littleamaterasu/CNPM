@@ -74,6 +74,8 @@ const games = [
 ];
 
 function Home() {
+    
+    const [listPost, setListPost] = useState([])
     const [active, setActive] = useState("default")
     const [gameSelected, setGameSelected] = useState(null)
     const [gameSelectedList, setGameSelectedList] = useState([])
@@ -81,6 +83,13 @@ function Home() {
     const handleSetGameSelectedList = (e) => {
         setGameSelectedList(e)
     }
+
+    const handleSetListPost = (e) => {
+        setListPost([...listPost, e])
+        console.log(listPost)
+    }
+
+
 
     const handleSetActive = (name, game = null) => {
         console.log(name)
@@ -94,7 +103,7 @@ function Home() {
             {
                 (active === "default" && <Content gameInfos={games} />)
                 || (active === "Thongke" && <ThongKeContent />)
-                || (active === "GameInfo" && <GameInfo gameSelected={gameSelected} />)
+                || (active === "GameInfo" && <GameInfo gameSelected={gameSelected} handleSetListPost={handleSetListPost} listPost={listPost}/>)
                 || (active === "gameSelectedList" && <GameList gameSelectedList={gameSelectedList} handleSetActive={handleSetActive} />)
                 || (active === "ChangeInfo" && <ChangeInfo />)
                 || <h3>Error</h3>

@@ -35,7 +35,6 @@ const SearchBar = ({handleSetActive, handleSetGameSelectedList}) => {
     };
 
     const handleShowResult = (type, Data) => {
-        console.log(Data)
         hideList()
         handleSetActive(type)
         handleSetGameSelectedList(Data)
