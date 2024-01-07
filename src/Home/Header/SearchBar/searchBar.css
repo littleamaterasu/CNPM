@@ -27,9 +27,14 @@
     color: #ccc;
   }
   
-  .FaSearch {
+  .Input FaSearch {
     cursor: pointer;
     margin-left: 10px;
+  }
+
+  .Input FaRegTimesCircle{
+    padding-right: 10px;
+    cursor: pointer;
   }
   
   .res {

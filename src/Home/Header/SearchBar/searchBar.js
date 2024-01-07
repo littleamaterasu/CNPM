@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaRegTimesCircle } from "react-icons/fa";
 import './searchBar.css';
 
-const SearchBar = ({handleSetActive, handleSetGameSelectedList}) => {
+const SearchBar = ({ handleSetActive, handleSetGameSelectedList }) => {
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
@@ -20,7 +20,7 @@ const SearchBar = ({handleSetActive, handleSetGameSelectedList}) => {
 
     const handleFilter = (e) => {
         const res = filterD.filter(f => f.name.toLowerCase().includes(e.toLowerCase()) && e);
-        if(e) setInput(true)
+        if (e) setInput(true)
         else setInput(false)
         setData(res);
     };
@@ -71,7 +71,16 @@ const SearchBar = ({handleSetActive, handleSetGameSelectedList}) => {
                     onChange={(e) => handleFilter(e.target.value)}
                 />
 
-                <FaSearch onClick={() => handleShowResult("gameSelectedList", data)} style={{ color: 'white' }} />
+                <FaRegTimesCircle
+                    onClick={hideList}
+                    style={{ color: 'white', cursor: 'pointer' }}
+                />
+
+                <FaSearch
+                    onClick={() => handleShowResult("gameSelectedList", data)}
+                    style={{ color: 'white', cursor: 'pointer', marginLeft: '10px' }}
+                />
+                
             </div>
 
             {Input && showList && (

@@ -1,5 +1,40 @@
-.ChangeInfo{
-    padding-top: 60px;
-    padding-left: 350px;
+.ChangeInfo {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
     color: aliceblue;
-}
+  }
+  
+  form {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
