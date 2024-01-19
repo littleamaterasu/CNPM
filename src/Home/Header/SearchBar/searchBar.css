@@ -19,17 +19,12 @@
     padding: 8px;
     border: none;
     outline: none;
-    background-color: transparent;
+    background-color: #000;
     color: white;
   }
   
   .Input input::placeholder {
     color: #ccc;
-  }
-  
-  .Input FaSearch {
-    cursor: pointer;
-    margin-left: 10px;
   }
 
   .Input FaRegTimesCircle{

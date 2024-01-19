@@ -1,0 +1,41 @@
+.transact {
+    color: aliceblue;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transact h2 {
+    color: #333;
+  }
+  
+  .transact ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .transact li {
+    margin-bottom: 5px;
+  }
+  
+  .transact button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .transact button:hover {
+    background-color: #45a049;
+  }
+  
+  .transact strong {
+    font-size: 18px;
+  }
+  

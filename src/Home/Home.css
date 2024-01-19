@@ -1,3 +1,8 @@
 .mainpage{
     display: flex;
 }
+
+.cnt{
+    margin-left: 350px;
+    padding-top: 100px;
+}

@@ -1,39 +1,36 @@
 /* GameContent.css */
 
 .GameContent {
-    color: aliceblue;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-  }
-  
-  h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-top: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  ul li {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  /* Apply styles to the Download and Post components */
-  .Download {
-    margin-bottom: 20px;
-  }
-  
-  .Post {
-    margin-top: 20px;
-  }
-  
+  align-items: center;
+  color: aliceblue;
+}
+
+.GameInfo {
+  display: flex;
+  align-items: center;
+}
+
+.Info {
+  flex-grow: 1;
+}
+
+.Shot img {
+  max-width: 100%;
+}
+
+.Post {
+  flex-shrink: 0;
+  max-width: 400px; 
+  margin-left: 20px; 
+}
+
+.post ul{
+  list-style: none;
+}
+
+.feedback-item {
+  border-radius: 10px;
+  border: 3px solid #ddd; /* Adjust border styles as needed */
+  margin-bottom: 10px; /* Adjust spacing between feedback items as needed */
+  padding: 10px;
+}

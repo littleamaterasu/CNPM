@@ -1,11 +1,33 @@
-.GameList{
-    padding-top: 60px;
-    padding-left: 350px;
+/* GameList.css */
+
+.GameList {
     color: aliceblue;
-}
-.GameList ul li{
+    margin: 20px;
+  }
+  
+  .GameList ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
-}
-.GameList ul li h3{
+    flex-wrap: wrap;
+  }
+  
+  .GameList ul li {
+    border: 1px solid #ccc;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    flex: 0 0 calc(33.333% - 20px); /* Adjust the width based on your layout needs */
+  }
+  
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
     cursor: pointer;
-}
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  

@@ -1,0 +1,39 @@
+/* Cart.css */
+
+.Cart {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Cart h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.Cart p {
+    color: #555;
+}
+
+.Cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Cart li {
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.Cart li:last-child {
+    margin-bottom: 0;
+}

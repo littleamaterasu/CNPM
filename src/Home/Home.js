@@ -6,77 +6,19 @@ import ThongKeContent from './MainPage/ThongKeContent/ThongKeContent'
 import GameInfo from './MainPage/GameContent/GameContent'
 import GameList from './MainPage/GameList/GameList'
 import ChangeInfo from './MainPage/ChangeInfo/ChangeInfo'
+import Cart from './MainPage/Cart/Cart'
 import './Home.css'
 
 const categories = [
-    'Adventure',
-    'Strategy',
-    'Simulation',
-    'Role-Playing',
+    'RPG',
+    'FPS',
     'Puzzle',
     'Action',
-    'Sports',
-    'Horror',
-    'Educational',
-    'Casual'
+    'Sport',
 ];
 
-const games = [
-    {
-        id: 1,
-        name: 'Epic Quest Chronicles',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 2,
-        name: 'Galactic Odyssey',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 3,
-        name: 'Mystic Legends: Awakening',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 4,
-        name: 'Shadowbane Legacy',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 5,
-        name: 'Chrono Rift: Resurgence',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 6,
-        name: 'Inferno Saga',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 7,
-        name: 'Aetherial Conquest',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 8,
-        name: 'Dragonheart Legacy',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 9,
-        name: 'Nebula Frontier: Exodus',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-    {
-        id: 10,
-        name: 'Legends of Valoria',
-        imageUrl: 'https://www.godisageek.com/wp-content/uploads/Back-to-Bed-review.jpg',
-    },
-];
+function Home({ user, handleSetUser, handleSetItem }) {
 
-function Home() {
-    
-    const [listPost, setListPost] = useState([])
     const [active, setActive] = useState("default")
     const [gameSelected, setGameSelected] = useState(null)
     const [gameSelectedList, setGameSelectedList] = useState([])
@@ -85,31 +27,30 @@ function Home() {
         setGameSelectedList(e)
     }
 
-    const handleSetListPost = (e) => {
-        setListPost([...listPost, e])
-        console.log(listPost)
-    }
-
 
 
     const handleSetActive = (name, game = null) => {
-        console.log(name)
         setActive(name)
         setGameSelected(game)
     }
     return (
         <div>
-            <Header handleSetActive={handleSetActive} handleSetGameSelectedList={handleSetGameSelectedList} />
-            <div className='mainpage'><SideBar categories={categories} />
-            {
-                (active === "default" && <Content gameInfos={games} />)
-                || (active === "Thongke" && <ThongKeContent />)
-                || (active === "GameInfo" && <GameInfo gameSelected={gameSelected} handleSetListPost={handleSetListPost} listPost={listPost}/>)
-                || (active === "gameSelectedList" && <GameList gameSelectedList={gameSelectedList} handleSetActive={handleSetActive} />)
-                || (active === "ChangeInfo" && <ChangeInfo />)
-                || <h3>Error</h3>
-            }</div>
-            
+            <Header user={user} handleSetUser={handleSetUser} handleSetActive={handleSetActive} handleSetGameSelectedList={handleSetGameSelectedList} />
+            <div className='mainpage'>
+                <SideBar categories={categories} handleSetGameSelectedList={handleSetGameSelectedList} handleSetActive={handleSetActive} />
+                <div className='cnt'>
+                    {
+                        (active === "default" && <Content user={user} handleSetActive={handleSetActive} />)
+                        || (active === "Thongke" && <ThongKeContent user={user} />)
+                        || (active === "GameInfo" && <GameInfo user={user} gameSelected={gameSelected} />)
+                        || (active === "gameSelectedList" && <GameList user={user} gameSelectedList={gameSelectedList} handleSetActive={handleSetActive} />)
+                        || (active === "ChangeInfo" && <ChangeInfo user={user} handleSetUser={handleSetUser} />)
+                        || (active === "Cart" && <Cart handleSetItem={handleSetItem} user={user} />)
+                        || <h3>Error</h3>
+                    }
+                </div>
+            </div>
+
         </div>
     )
 }

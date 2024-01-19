@@ -4,10 +4,10 @@ import './searchBar.css';
 
 const SearchBar = ({ handleSetActive, handleSetGameSelectedList }) => {
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('http://127.0.0.1:8000/api/game/all')
             .then(res => res.json())
             .then(json => {
-                setFilterD(json);
+                setFilterD(json.data);
             });
     }, []);
 
@@ -53,7 +53,7 @@ const SearchBar = ({ handleSetActive, handleSetGameSelectedList }) => {
             <ul>
                 {data.map((Data, Key) => (
                     <li onClick={() => handleUserClick("GameInfo", Data)} key={Key}>
-                        {Data.name} (ID: {Data.id})
+                        {Data.name})
                     </li>
                 ))}
             </ul>
@@ -73,12 +73,12 @@ const SearchBar = ({ handleSetActive, handleSetGameSelectedList }) => {
 
                 <FaRegTimesCircle
                     onClick={hideList}
-                    style={{ color: 'white', cursor: 'pointer' }}
+                    style={{ color: 'white', cursor: 'pointer', marginLeft: '10px', marginBottom:'7px' }}
                 />
 
                 <FaSearch
                     onClick={() => handleShowResult("gameSelectedList", data)}
-                    style={{ color: 'white', cursor: 'pointer', marginLeft: '10px' }}
+                    style={{ color: 'white', cursor: 'pointer', marginLeft: '10px', marginBottom:'7px' }}
                 />
                 
             </div>

@@ -1,5 +1,35 @@
-.TK{
-    padding-top: 60px;
-    padding-left: 350px;
-    color: aliceblue;
+.TK {
+  color: aliceblue;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
+.TK ul {
+  list-style: none;
+  padding: 0;
+}
+
+.TK li {
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.TK .GameInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.TK .Info {
+  width: 80%;
+}
+
+.TK h4 {
+  margin: 0;
+}
+
+/* You can customize the styles further based on your design preferences */
